@@ -13,16 +13,16 @@
 
   <DisplayName DefaultValue="Protocolo SCPM" />
   <Description DefaultValue="Entrada e saida de documentos, manifestacoes e processos do CEDMU gravando direto na planilha." />
-  <IconUrl DefaultValue="https://SEUUSUARIO.github.io/protocolo-scpm/assets/icon-32.png" />
-  <HighResolutionIconUrl DefaultValue="https://SEUUSUARIO.github.io/protocolo-scpm/assets/icon-80.png" />
-  <SupportUrl DefaultValue="https://SEUUSUARIO.github.io/protocolo-scpm/" />
+  <IconUrl DefaultValue="https://scpm5rpm.github.io/protocolo-scpm/assets/icon-32.png" />
+  <HighResolutionIconUrl DefaultValue="https://scpm5rpm.github.io/protocolo-scpm/assets/icon-80.png" />
+  <SupportUrl DefaultValue="https://scpm5rpm.github.io/protocolo-scpm/" />
 
   <Hosts>
     <Host Name="Workbook" />
   </Hosts>
 
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://SEUUSUARIO.github.io/protocolo-scpm/index.html" />
+    <SourceLocation DefaultValue="https://scpm5rpm.github.io/protocolo-scpm/index.html" />
   </DefaultSettings>
 
   <Permissions>ReadWriteDocument</Permissions>
@@ -71,14 +71,14 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16" DefaultValue="https://SEUUSUARIO.github.io/protocolo-scpm/assets/icon-16.png" />
-        <bt:Image id="Icon.32" DefaultValue="https://SEUUSUARIO.github.io/protocolo-scpm/assets/icon-32.png" />
-        <bt:Image id="Icon.80" DefaultValue="https://SEUUSUARIO.github.io/protocolo-scpm/assets/icon-80.png" />
+        <bt:Image id="Icon.16" DefaultValue="https://scpm5rpm.github.io/protocolo-scpm/assets/icon-16.png" />
+        <bt:Image id="Icon.32" DefaultValue="https://scpm5rpm.github.io/protocolo-scpm/assets/icon-32.png" />
+        <bt:Image id="Icon.80" DefaultValue="https://scpm5rpm.github.io/protocolo-scpm/assets/icon-80.png" />
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://SEUUSUARIO.github.io/protocolo-scpm/" />
-        <bt:Url id="Commands.Url" DefaultValue="https://SEUUSUARIO.github.io/protocolo-scpm/commands.html" />
-        <bt:Url id="Taskpane.Url" DefaultValue="https://SEUUSUARIO.github.io/protocolo-scpm/index.html" />
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://scpm5rpm.github.io/protocolo-scpm/" />
+        <bt:Url id="Commands.Url" DefaultValue="https://scpm5rpm.github.io/protocolo-scpm/commands.html" />
+        <bt:Url id="Taskpane.Url" DefaultValue="https://scpm5rpm.github.io/protocolo-scpm/index.html" />
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Protocolo SCPM carregado" />
