@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Protocolo SCPM</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+</head>
+
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-mark">SCPM</div>
+      <div>
+        <h1>Protocolo</h1>
+        <p id="brand-sub">Subcorregedoria 5ª RPM</p>
+      </div>
+    </div>
+    <button id="btn-user" class="ghost" type="button" title="Identificação do usuário">Entrar</button>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab is-active" data-view="entrada" role="tab">Entrada</button>
+    <button class="tab" data-view="saida" role="tab">Saída</button>
+    <button class="tab" data-view="consulta" role="tab">Consulta</button>
+    <button class="tab" data-view="sobre" role="tab">Ajuda</button>
+  </nav>
+
+  <main id="main">
+
+    <!-- ENTRADA -->
+    <section class="view is-active" data-view="entrada">
+      <div class="view-head">
+        <h2>Entrada de documentos</h2>
+        <p>Grava na próxima linha livre da aba <b>Entrada de Documentos</b>.</p>
+      </div>
+      <div class="editbar" data-editbar="entrada" hidden></div>
+      <form id="form-entrada" class="form" autocomplete="off"></form>
+      <div class="actions">
+        <button type="submit" form="form-entrada" id="btn-entrada" class="primary">Gravar entrada</button>
+        <button type="reset" form="form-entrada" class="ghost">Limpar</button>
+      </div>
+      <div class="result" id="res-entrada" hidden></div>
+    </section>
+
+    <!-- SAIDA -->
+    <section class="view" data-view="saida">
+      <div class="view-head">
+        <h2>Saída e produção</h2>
+        <p>Grava na próxima linha livre da aba <b>Saída e Produção</b>.</p>
+      </div>
+      <div class="editbar" data-editbar="saida" hidden></div>
+      <form id="form-saida" class="form" autocomplete="off"></form>
+      <div class="actions">
+        <button type="submit" form="form-saida" id="btn-saida" class="primary">Gravar saída</button>
+        <button type="reset" form="form-saida" class="ghost">Limpar</button>
+      </div>
+      <div class="result" id="res-saida" hidden></div>
+    </section>
+
+    <!-- CONSULTA -->
+    <section class="view" data-view="consulta">
+      <div class="view-head">
+        <h2>Consulta</h2>
+        <p>Pesquisa os últimos lançamentos das duas abas e permite alterar um registro.</p>
+      </div>
+      <div class="searchbar">
+        <input id="q" type="search" placeholder="Protocolo, nº doc, envolvido, tipo..." />
+        <select id="q-sheet">
+          <option value="ambas">Ambas</option>
+          <option value="entrada">Entrada</option>
+          <option value="saida">Saída</option>
+        </select>
+        <button type="button" id="btn-refresh" class="ghost" title="Reler a planilha">Atualizar</button>
+      </div>
+      <div id="consulta-resumo" class="muted small"></div>
+      <div id="consulta-lista" class="list"></div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="view" data-view="sobre">
+      <div class="view-head">
+        <h2>Ajuda</h2>
+      </div>
+      <div class="card">
+        <h3>Como funciona</h3>
+        <p>O painel grava <b>somente nas colunas de digitação</b>. As colunas com fórmula, os
+          estilos, as validações e o restante da planilha não são alterados.</p>
+        <p>Cada pessoa grava na própria sessão do Excel Online. A planilha é compartilhada e o
+          Excel combina as alterações automaticamente.</p>
+      </div>
+      <div class="card">
+        <h3>Alterar um lançamento</h3>
+        <ol class="steps">
+          <li>Abra a aba <b>Consulta</b> e localize o lançamento.</li>
+          <li>Clique em <b>Editar</b>: o formulário abre preenchido com os dados da linha.</li>
+          <li>Ajuste o que precisar e clique em <b>Salvar alterações</b>.</li>
+        </ol>
+        <p class="hint">Se outra pessoa alterou a mesma linha enquanto você editava, o painel avisa
+          antes de sobrescrever.</p>
+      </div>
+      <div class="card">
+        <h3>Boas práticas</h3>
+        <ul>
+          <li>Deixe a planilha sempre no OneDrive, aberta pelo Excel Online.</li>
+          <li>Não lance o mesmo documento em duas máquinas ao mesmo tempo.</li>
+          <li>Confira o número do protocolo devolvido na tela após gravar.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Diagnóstico</h3>
+        <dl id="diag"></dl>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
